@@ -84,16 +84,23 @@ const collection = [
   },
 ];
 
-let container = document.getElementsByClassName("container");
+
+
+
+
+
+
+
+let container = document.querySelector(".container");
 
 collection.forEach((element) => {
   //create new card
-   let newCard = document.createElement("div");
-   newCard.classList = "card";
-  document.body.appendChild(newCard);
-//construct content
- let content = `       <img
- src="src/movie_poster/interstellar.jpg"
+  let newCard = document.createElement("div");
+  newCard.classList = "card";
+
+  //construct content
+  let content = `       
+  <img src=${element.movie_poster}
  alt="interstellar"
  class="image"
  />
@@ -104,28 +111,9 @@ collection.forEach((element) => {
  <p class="director">${element.director}</p>
  </div> `;
 
- newCard.innerHTML += content;
+  newCard.innerHTML += content;
 
+  container.appendChild(newCard);
 
-
-
-
-
-
-  console.log(`${element.movie_title}`);
+//   console.log(`${element.movie_title}`);
 });
-
-//construct content
-// let content = `       <img
-// src="src/movie_poster/interstellar.jpg"
-// alt="interstellar"
-// class="image"
-// />
-// <div class="contentText">
-// <h2 class="title">${element.movie_title}</h2>
-// <p class="genre">Sci-Fi</p>
-// <p class="release_date">2014</p>
-// <p class="director">Christopher Nolan</p>
-// </div> `;
-
-// container.innerHTML += content;
