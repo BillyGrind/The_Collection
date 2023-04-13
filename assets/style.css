@@ -1,0 +1,23 @@
+body {
+  background-color: lightcyan;
+}
+body .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  background-color: white;
+  padding: 10px;
+}
+.card .contentText {
+  align-items: center;
+}
+.card .contentText .title {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
