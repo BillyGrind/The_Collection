@@ -84,13 +84,6 @@ const collection = [
   },
 ];
 
-
-
-
-
-
-
-
 let container = document.querySelector(".container");
 
 collection.forEach((element) => {
@@ -107,13 +100,24 @@ collection.forEach((element) => {
  <div class="contentText">
  <h2 class="title">${element.movie_title}</h2>
  <p class="genre">${element.genre}</p>
- <p class="release_date">${element.release_date}</p>
  <p class="director">${element.director}</p>
+ <p class="release_date">${element.release_date}</p>
+  <button class="delete_button">Delete</button>
  </div> `;
 
   newCard.innerHTML += content;
 
+  // let caca = document.getElementsByClassName("delete_button");
+  //  caca.addEventListener("click", () =>{
+  //    newCard.remove();
+  //  });
+
+  let deleteButton = newCard.querySelector(".delete_button");
+  deleteButton.addEventListener("click", () => {
+    newCard.remove();
+  });
+
   container.appendChild(newCard);
 
-//   console.log(`${element.movie_title}`);
+  //   console.log(`${element.movie_title}`);
 });

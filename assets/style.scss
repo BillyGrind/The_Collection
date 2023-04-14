@@ -1,5 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+
 $screen-smartphone: 375px;
 $screen-desktop: 960px;
+
+$brun: #99621e;
+$_brun_clair: #d38b5d;
+$fond: #f3ffb6;
+$vert_clair: #739e82;
+$vert: #2c5530;
 
 @mixin smartphone {
   @media (min-width: $screen-smartphone) {
@@ -13,70 +22,112 @@ $screen-desktop: 960px;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 body {
-  background-color: lightgrey;
+  background-color: $vert;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-//   margin: 40px;
+  //   margin: 40px;
 }
 
 .header {
   display: flex;
   flex-direction: column;
-   margin: auto;
-//   margin: 40px;
+  margin: 25px auto;
+  //   margin: 40px;
   width: 400px;
   text-align: center;
-  @include desktop{
-        width: 1000px;
-        display: grid;
-        grid-column: 3fr;
-        grid-row: 2fr;
+  color: $_brun_clair;
+  @include desktop {
+    width: 1000px;
+    display: grid;
+    grid-column: 3fr;
+    grid-row: 2fr;
   }
+}
+.main_title {
+  font-family: "Arvo";
+  font-weight: 400;
+  font-style: italic;
+  font-size: 45px;
+  text-transform: uppercase;
+}
+.text_intro {
+  font-family: "Arvo";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
 }
 .info.header {
   display: flex;
   justify-content: center;
 }
 .image_profil {
-  //   display: none;
-  // justify-content: flex-start;
-  width: 150px;
-  height: 150px;
-  border-radius: 150px;
-  @include desktop{
-    grid-column: 1fr;
-    grid-row: 1fr;
+  display: none;
+  @include desktop {
+    display: contents;
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
   }
+}
+
+.menu_deroulant {
+  margin: auto;
 }
 
 .card {
   display: flex;
-  width: 375px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
   background-color: grey;
   margin: 20px;
-  padding: 10px;
+  padding: 20px 30px;
   border-radius: 10px;
-  color: lightskyblue;
+  background-color: $fond;
+  color: $brun;
+  // border: #2c5530 solid 10px;
+  .title {
+    font-family: "Play";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: left;
+    text-decoration: underline;
+  }
+  p {
+    font-family: "Play";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  .genre {
+    background-color: cyan;
+    width: auto;
+    color: $vert;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  &:hover {
+    transform: scale(120%);
+    box-shadow: rgba(125, 219, 17, 0.75) 0px 5px 15px;
+    margin: 50px auto;
+    @include desktop {
+      transform: scale(120%);
+      box-shadow: rgba(125, 219, 17, 0.75) 0px 5px 15px;
+      margin: auto;
+    }
+  }
 }
-
+.delete_button {
+  color: red;
+}
 .image {
   // height: min-content;
   // display: block;
