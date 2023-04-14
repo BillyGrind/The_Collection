@@ -27,6 +27,8 @@ const collection = [
     genre: ["SuperNatural Horror"],
     movie_poster: "src/movie_poster/evil_dead.jpg",
     director: "Sam Raimi",
+    resume:
+      "Mia (Jane Levy), a drug addict, is determined to kick the habit. To that end, she asks her brother, David (Shiloh Fernandez), his girlfriend, Natalie (Elizabeth Blackmore) and their friends Olivia (Jessica Lucas) and Eric (Lou Taylor Pucci) to accompany her to their family's remote forest cabin to help her through withdrawal. Eric finds a mysterious Book of the Dead at the cabin and reads aloud from it, awakening an ancient demon. All hell breaks loose when the malevolent entity possesses Mia.",
   },
   {
     movie_title: "Saving Private Ryan",
@@ -34,6 +36,8 @@ const collection = [
     genre: ["War", "Drama"],
     movie_poster: "src/movie_poster/saving_private_ryan.jpg",
     director: "Steven Spielberg",
+    resume:
+      "Set in 1944 in France during World War II, it follows a group of soldiers, led by Captain John Miller (Tom Hanks), on their mission to extricate Private James Ryan (Matt Damon) from the war after his three brothers are killed in battle.",
   },
   {
     movie_title: "Cloud Atlas",
@@ -41,6 +45,8 @@ const collection = [
     genre: ["Sci-Fi"],
     movie_poster: "src/movie_poster/cloud_atlas.jpg",
     director: "Lana Wachowski",
+    resume:
+      "Actors (Tom Hanks, Halle Berry, Jim Broadbent) take on multiple roles in an epic that spans five centuries. An attorney harbors a fleeing slave on a voyage from the Pacific Islands in 1849; a poor composer in pre-World War II Britain struggles to finish his magnum opus before a past act catches up with him; a genetically engineered worker in 2144 feels the forbidden stirring of human consciousness -- and so on. As souls are born and reborn, they renew their bonds to one another throughout time.",
   },
   {
     movie_title: "John Wick",
@@ -48,6 +54,8 @@ const collection = [
     genre: ["Action", "Thriller"],
     movie_poster: "src/movie_poster/john_wick.jpg",
     director: "Derek Kolstad",
+    resume:
+      "Legendary assassin John Wick (Keanu Reeves) retired from his violent career after marrying the love of his life. Her sudden death leaves John in deep mourning. When sadistic mobster Iosef Tarasov (Alfie Allen) and his thugs steal John's prized car and kill the puppy that was a last gift from his wife, John unleashes the remorseless killing machine within and seeks vengeance. Meanwhile, Iosef's father (Michael Nyqvist) -- John's former colleague -- puts a huge bounty on John's head.",
   },
   {
     movie_title: "Gravity",
@@ -55,6 +63,8 @@ const collection = [
     genre: ["Sci-Fi", "Thriller"],
     movie_poster: "src/movie_poster/gravity.jpg",
     director: "Alfonso Cuaron",
+    resume:
+      "Dr. Ryan Stone (Sandra Bullock) is a medical engineer on her first shuttle mission. Her commander is veteran astronaut Matt Kowalsky (George Clooney), helming his last flight before retirement. Then, during a routine space walk by the pair, disaster strikes: The shuttle is destroyed, leaving Ryan and Matt stranded in deep space with no link to Earth and no hope of rescue. As fear turns to panic, they realize that the only way home may be to venture further into space",
   },
   {
     movie_title: "Stalingrad",
@@ -62,6 +72,8 @@ const collection = [
     genre: ["War", "Drama"],
     movie_poster: "src/movie_poster/stalingrad.jpg",
     director: "Joseph Vilsmaier",
+    resume:
+      "Stalingrad is a 1993 German anti-war film directed by Joseph Vilsmaier. It follows a platoon of German Army soldiers transferred to the Eastern Front of World War II, where they find themselves fighting in the Battle of Stalingrad. ",
   },
   {
     movie_title: "Kingdom of Heaven",
@@ -69,6 +81,8 @@ const collection = [
     genre: ["Historical", "Epic"],
     movie_poster: "src/movie_poster/kingdom_of_heaven.jpg",
     director: "Ridley Scott",
+    resume:
+      "Still in grief over his wife's sudden death, village blacksmith Balian (Orlando Bloom) joins his long-estranged father, Baron Godfrey (Liam Neeson), as a crusader on the road to Jerusalem. After a perilous journey to the holy city, the valiant young man enters the retinue of the leprous King Baldwin IV (Edward Norton), which is rife with dissent led by the treacherous Guy de Lusignan (Marton Csokas), who wishes to wage war against the Muslims for his own political and personal gain.",
   },
   {
     movie_title: "Super 8",
@@ -76,6 +90,8 @@ const collection = [
     genre: ["Sci-Fi", "Thriller"],
     movie_poster: "src/movie_poster/super_8.jpg",
     director: "J.J. Abrams",
+    resume:
+      "In 1979 Ohio, several youngsters (Elle Fanning, Joel Courtney, Gabriel Basso) are making a zombie movie with a Super-8 camera. In the midst of filming, the friends witness a horrifying train derailment and are lucky to escape with their lives. They soon discover that the catastrophe was no accident, as a series of unexplained events and disappearances soon follows. Deputy Jackson Lamb (Kyle Chandler), the father of one of the kids, searches for the terrifying truth behind the crash.",
   },
   {
     movie_title: "Iron Sky",
@@ -83,6 +99,8 @@ const collection = [
     genre: ["Sci-Fi", "Action"],
     movie_poster: "src/movie_poster/iron_sky.jpg",
     director: "Timo Vuorensola",
+    resume:
+      "An army of Nazis, hidden in a moon base for 70 years, prepares a gigantic warship for an invasion of Earth in 2018.",
   },
 ];
 
@@ -104,9 +122,13 @@ collection.forEach((element) => {
  <p class="genre">${element.genre}</p>
  <p class="director">${element.director}</p>
  <p class="release_date">${element.release_date}</p>
- <p class="resume">${element.resume}</p>
   <button class="delete_button">Delete</button>
- </div> `;
+ </div> 
+ <div class="container_resume">
+ <h2 class="title_resume">Resume</h2>
+ <p class="resume">" ${element.resume} "</p>
+</div>
+ `;
 
   newCard.innerHTML += content;
 
@@ -122,7 +144,7 @@ collection.forEach((element) => {
 
   container.appendChild(newCard);
 
-  console.log(`${element.genre}`);
+  // console.log(`${element.genre}`);
 
   //   console.log(`${element.movie_title}`);
 });
