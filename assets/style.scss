@@ -76,7 +76,18 @@ body {
 }
 
 .menu_deroulant {
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 25px auto;
+  width: 400px;
+  text-align: center;
+  label {
+    margin-bottom: 10px;
+    font-family: "Play";
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $fond;
+  }
 }
 
 .card {
@@ -89,7 +100,14 @@ body {
   border-radius: 10px;
   background-color: $fond;
   color: $brun;
+  .resume {
+    display: none;
+  }
   // border: #2c5530 solid 10px;
+  @include desktop {
+    width: 900px;
+    height: 300px;
+  }
   .title {
     font-family: "Play";
     font-weight: 700;
@@ -114,16 +132,10 @@ body {
     border-radius: 5px;
     padding: 5px;
   }
-  &:hover {
-    transform: scale(120%);
-    box-shadow: rgba(125, 219, 17, 0.75) 0px 5px 15px;
-    margin: 50px auto;
-    @include desktop {
-      transform: scale(120%);
-      box-shadow: rgba(125, 219, 17, 0.75) 0px 5px 15px;
-      margin: auto;
-    }
-  }
+  // &:hover {
+  //   box-shadow: rgba(125, 219, 17, 2) 0px 5px 15px;
+  //   margin: 50px auto;
+  // }
 }
 .delete_button {
   color: red;

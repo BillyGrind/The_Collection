@@ -60,7 +60,18 @@ body {
 }
 
 .menu_deroulant {
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 25px auto;
+  width: 400px;
+  text-align: center;
+}
+.menu_deroulant label {
+  margin-bottom: 10px;
+  font-family: "Play";
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #f3ffb6;
 }
 
 .card {
@@ -73,6 +84,15 @@ body {
   border-radius: 10px;
   background-color: #f3ffb6;
   color: #99621e;
+}
+.card .resume {
+  display: none;
+}
+@media (min-width: 960px) {
+  .card {
+    width: 900px;
+    height: 300px;
+  }
 }
 .card .title {
   font-family: "Play";
@@ -97,18 +117,6 @@ body {
   color: #2c5530;
   border-radius: 5px;
   padding: 5px;
-}
-.card:hover {
-  transform: scale(120%);
-  box-shadow: rgba(125, 219, 17, 0.75) 0px 5px 15px;
-  margin: 50px auto;
-}
-@media (min-width: 960px) {
-  .card:hover {
-    transform: scale(120%);
-    box-shadow: rgba(125, 219, 17, 0.75) 0px 5px 15px;
-    margin: auto;
-  }
 }
 
 .delete_button {
